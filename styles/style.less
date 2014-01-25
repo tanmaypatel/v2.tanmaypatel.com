@@ -1,0 +1,895 @@
+@import "3L";
+@import "fonts";
+
+/* ***** */
+/* FONTS */
+/* ***** */
+
+@heroFontFamily: "nexa_bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@taglineFontFamily: Georgia, "Times New Roman", serif;
+@codeFontFamily: "source_code_pro", courier;
+@headingFontFamily: "roboto_light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@contentFontFamily: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* ****** */
+/* COLORS */
+/* ****** */
+
+@premiumPurple: rgb(194, 14, 105);
+@freshGreen: rgb(126, 151, 17);
+@oceanicAqua: rgb(60, 181, 172);
+@facebookBlue: rgb(0,136,196);
+@tangyRed: rgb(221, 34, 45);
+@goldenYellow: rgb(248, 199, 16);
+
+*
+{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    outline:none;
+}
+
+.no-ready
+{
+    height: 100%;
+
+    body
+    {
+        height: 100%;
+        background: url("images/loading.gif") center center no-repeat;
+    }
+}
+
+body
+{
+    font-family: @contentFontFamily;
+    font-size: 16px;
+    line-height: 1.5;
+
+    background: url('images/canvasTexture.png');
+}
+
+.no-ready
+{
+    #pageContainer
+    {
+        display: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, h7
+{
+    font-family: @headingFontFamily;
+    text-transform: uppercase;
+    fontsize: bigger;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+#brand
+{
+    text-align: center;
+
+    .brandNameTextEffect
+    {
+        @glowDistance: 8px;
+        @glowSpread: 16px;
+
+        text-shadow: 0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.3),
+        0 3px 5px rgba(0, 0, 0, 0.2),
+        0px 0px (@glowSpread * 3) fade(@premiumPurple, 0%),
+            -(@glowDistance) -(@glowDistance) @glowSpread fade(@freshGreen, 50%),
+            @glowDistance -(@glowDistance) @glowSpread fade(@facebookBlue, 50%),
+            @glowDistance @glowDistance @glowSpread fade(@tangyRed, 50%),
+        -(@glowDistance) @glowDistance @glowSpread fade(@goldenYellow, 66%);
+    }
+
+    color: #AAAAAA;
+
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    h1
+    {
+        margin: 0;
+        margin-bottom: 10px;
+
+        padding: 0;
+
+        font-size: 3em;
+    }
+
+    .name
+    {
+        font-family: @heroFontFamily;
+        text-transform: uppercase;
+        color: white;
+
+        .brandNameTextEffect;
+    }
+
+    small
+    {
+        display: block;
+        font-family: @taglineFontFamily;
+        font-style: italic;
+        color: #AAAAAA;
+        text-transform: none;
+        font-size: 0.33em;
+
+        margin-top: 10px;
+        vertical-align: top;
+    }
+}
+
+#tagLine
+{
+    text-align: center;
+    color: #999;
+
+    margin: 20px;
+
+    h2
+    {
+        padding: 0;
+        margin: 0;
+    }
+
+    .primaryLine
+    {
+        display: block;
+
+        font-size: 1.2em;
+        font-family: @heroFontFamily;
+    }
+
+    .secondaryLine
+    {
+        display: block;
+        font-size: 0.5em;
+        line-height: 1.2;
+
+        color: @facebookBlue;
+    }
+}
+
+#cardContainer
+{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    overflow: hidden;
+
+    &.collapsed
+    {
+        #cardWrapper
+        {
+            height: 0;
+            overflow: hidden;
+
+            border-top: none;
+
+            .box-shadow(0 -35px 30px 10px black);
+        }
+    }
+
+    #contactDrawerHandle
+    {
+        display: inline-block;
+
+        color: white;
+        text-shadow: none;
+        .gradient(@facebookBlue, darken(@facebookBlue, 5%));
+        .box-shadow(0 1px 1px rgba(0, 0, 0, 0.25));
+
+        padding: 5px 15px;
+
+        .round-corner(bottom-left, 10px);
+        .round-corner(bottom-right, 10px);
+
+        &:hover
+        {
+            text-decoration: none;
+        }
+    }
+}
+
+#cardWrapper
+{
+    text-align: left;
+
+    border: 1px solid #D4D4D4;
+    .gradient(#FFFFFF, #F2F2F2);
+    .round-corners(5px);
+    .box-shadow(0 1px 4px rgba(0, 0, 0, 0.067));
+}
+
+#card
+{
+    padding: 10px;
+
+    #cardContactInformation:before, #summerizedContact:before
+    {
+        content: '{';
+        color: #808080;
+    }
+
+    #cardContactInformation:after, #summerizedContact:after
+    {
+        content: '}';
+        color: #808080;
+    }
+
+    #cardContactInformation
+    {
+        font-family: @codeFontFamily;
+        font-weight: normal;
+        font-size: 1em;
+        line-heihgt: 1.5;
+
+        margin: 0;
+
+        .wrapper ,.property
+        {
+            display: block;
+        }
+
+        .property
+        {
+            padding-left: 2em;
+        }
+
+        .propertyName
+        {
+            color: spin(@freshGreen, 12%);
+        }
+
+        .propertyValue
+        {
+          color: @facebookBlue;
+        }
+
+        & > .property > span.propertyValue
+        {
+            background: fade(spin(@goldenYellow, 12%), 75%);
+            color: @tangyRed;
+        }
+    }
+}
+
+@media (max-width: 480px)
+{
+    #card
+    {
+        #cardContactInformation:before
+        {
+            content: '';
+        }
+
+        #cardContactInformation:after
+        {
+            content: '';
+        }
+
+        #cardContactInformation
+        {
+            .property
+            {
+                padding-bottom: 0.8em;
+            }
+
+            .propertyName
+            {
+                display: block;
+            }
+
+            .propertyValue
+            {
+                display: block;
+                padding-left: 1em;
+            }
+
+            ul.propertyValue
+            {
+                padding-left: 0;
+            }
+
+            & > .property
+            {
+                padding-left: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+#connectionLinks
+{
+    font-family: @taglineFontFamily;
+    font-style: italic;
+
+    ul
+    {
+        padding: 20px 0;
+        margin: 0;
+    }
+
+    li
+    {
+        padding: 5px;
+    }
+
+    a
+    {
+        display: block;
+        padding-left: 28px;
+        line-height: 24px;
+        height: 24px;
+
+        color: #808080;
+
+        font-size: 0.9em;
+
+        background: url("images/socialMediaIcons.png") no-repeat;
+
+        span
+        {
+            text-shadow: rgba(0, 0, 0, 0.4) 0 1px 1px;
+        }
+
+        span:first-child
+        {
+            display: none;
+        }
+
+        &:hover
+        {
+            text-decoration: none;
+
+            span
+            {
+                text-shadow: none;
+            }
+        }
+    }
+
+    .twitter
+    {
+        background-position: 0 0;
+    }
+
+    .facebook
+    {
+        background-position: -24px -24px;
+    }
+
+    .linkedin
+    {
+        background-position: -48px -48px;
+    }
+
+    .delicious
+    {
+        background-position: -72px -72px;
+    }
+}
+
+@media (max-width: 767px)
+{
+    #connectionLinks
+    {
+        ul
+        {
+            padding: 5px 0;
+            margin: 0;
+        }
+
+        li
+        {
+            display: inline-block;
+        }
+    }
+}
+
+@media (max-width: 400px)
+{
+    #connectionLinks
+    {
+        li
+        {
+            width: 49%;
+        }
+    }
+}
+
+
+
+#summaryWrapper
+{
+    margin-bottom: 40px;
+
+    #greetings
+    {
+        display: block;
+        font-family: @headingFontFamily;
+        font-size: 30px;
+        line-height: 1.5em;
+        color: @facebookBlue;
+    }
+
+    .heart
+    {
+        color: @tangyRed;
+        font-size: 1.2em;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 480px)
+{
+    #summaryWrapper
+    {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+#navigationBarContainer
+{
+    margin-bottom: 0;
+}
+
+#navigationBar
+{
+    .brand
+    {
+        display: none;
+    }
+
+    .navbar-inner
+    {
+        .nav
+        {
+            float: none;
+            text-align: center;
+
+            li
+            {
+                float: none;
+                display: inline-block;
+
+                a
+                {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+
+                &.active a
+                {
+                    margin-top: 3px;
+                    color: @facebookBlue;
+                }
+
+                &.emphasize a
+                {
+                    color: white;
+                    text-shadow: none;
+                    .gradient(@facebookBlue, darken(@facebookBlue, 5%));
+                    .box-shadow(0 1px 1px rgba(0, 0, 0, 0.25));
+                }
+            }
+        }
+    }
+}
+
+.fixedNavigation
+{
+    #navigationBar
+    {
+        position: fixed;
+        top: 0;
+        z-index: 999;
+
+        .navbar-inner
+        {
+            .round-corner(top-left, 0);
+            .round-corner(top-right, 0);
+        }
+    }
+}
+
+@media (max-width: 480px)
+{
+    #navigationBarContainer
+    {
+        display: none;
+    }
+}
+
+.section
+{
+    margin: 0;
+    padding-top: 40px;
+
+    .sectionHeading
+    {
+        color: @facebookBlue;
+        font-size: 30px;
+    }
+
+    h4
+    {
+        font-size: 1.3em;
+        color: @premiumPurple;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .section
+    {
+        padding-top: 10px;
+    }
+}
+
+#recognitions
+{
+    #recognitionsList li
+    {
+        line-height: 1.5;
+    }
+}
+
+#skills
+{
+    @gaugeDiameter: 120px;
+    @gaugeBorderWidth: 15px;
+    @guageIndicatorWidth: 10px;
+
+    #skillSet
+    {
+
+        font-family: @taglineFontFamily;
+
+        .skill
+        {
+            display: block;
+            margin-top: @gaugeDiameter + (@gaugeBorderWidth * 2) + 10;
+            text-align: center;
+
+            font-size: 1em;
+            font-style: italic;
+
+            color: gray;
+        }
+
+        .skillInformationWrapper
+        {
+            position: relative;
+
+            margin: 0 auto;
+
+            background: white;
+
+            width: @gaugeDiameter + (@gaugeBorderWidth * 2);
+            height: @gaugeDiameter + (@gaugeBorderWidth * 2);
+
+            .round-corners((@gaugeDiameter + (@gaugeBorderWidth * 2)) / 2);
+
+            border: 2px solid white;
+
+            .gradient(#DDD, #FFF, #FFF);
+            .box-shadow(0 (@gaugeBorderWidth / 6) (@gaugeBorderWidth / 2) rgba(0, 0, 0, 0.25));
+
+            margin-bottom: 50px;
+        }
+
+        .maxRating
+        {
+            position: absolute;
+
+            display: block;
+
+            width: @gaugeDiameter;
+            height: @gaugeDiameter;
+
+            margin-top: -(@gaugeDiameter / 2);
+            margin-left: -(@gaugeDiameter / 2);
+
+            top: 50%;
+            left: 50%;
+
+            background: url('images/progressGradient.png') center center no-repeat;
+
+            .round-corners(@gaugeDiameter / 2);
+
+            vertical-align: middle;
+            text-align: center;
+            .box-shadow(inset 0 (@gaugeBorderWidth / 2) (@gaugeBorderWidth / 3) rgba(0, 0, 0, 0.4));
+
+            text-indent: -9999px;
+        }
+
+        .rating
+        {
+            @ratingDiameter: (@gaugeDiameter - (2 * @guageIndicatorWidth));
+
+            position: absolute;
+
+            display: block;
+
+            width: @ratingDiameter;
+            height: @ratingDiameter;
+
+            margin-top: -(@ratingDiameter / 2);
+            margin-left: -(@ratingDiameter / 2);
+
+            top: 50%;
+            left: 50%;
+
+            background: white;
+
+            .round-corners(@ratingDiameter / 2);
+
+            vertical-align: middle;
+            text-align: center;
+            line-height: @ratingDiameter;
+
+            font-family: @headingFontFamily;
+            text-shadow: rgba(0, 0, 0, 0.4) 0 1px 2px;
+
+            font-size: 1.75em;
+            font-weight: bold;
+
+            border: 2px solid white;
+
+            .gradient(#CCC, #FFF, #FFF);
+            .box-shadow(0 (@guageIndicatorWidth / 2) (@guageIndicatorWidth / 3) rgba(0, 0, 0, 0.25));
+
+            z-index: 10;
+
+            & ~ .maxRating:after
+            {
+                content: '';
+
+                display: block;
+
+                position: absolute;
+
+                top: 0;
+
+                width: (@gaugeDiameter / 2);
+                height: (@gaugeDiameter / 2);
+
+                .round-corner(top-left, (@gaugeDiameter / 2));
+
+                background: url("images/progressGradientMask.png") no-repeat;
+
+                .opacity(0.66);
+            }
+
+            &.value_9_0 ~ .maxRating:after
+            {
+                background-position: -40px -115px;
+            }
+
+            &.value_8_5 ~ .maxRating:after
+            {
+                background-position: -40px -215px;
+            }
+
+            &.value_8_0 ~ .maxRating:after
+            {
+                background-position: -40px -315px;
+            }
+
+            &.value_7_5 ~ .maxRating:after
+            {
+                background-position: -40px -415px;
+            }
+        }
+    }
+}
+
+.timeDuration, .projectLink
+{
+    color: gray;
+    font-family: @headingFontFamily;
+    font-size: 1.1em;
+}
+
+@media (max-width: 767px)
+{
+    #skills
+    {
+        @guageHeight: 40px;
+
+        #skillSet
+        {
+            font-family: @taglineFontFamily;
+
+            .skill
+            {
+                margin-top: @guageHeight + 5;
+            }
+
+            .skillInformationWrapper
+            {
+                position: relative;
+
+                width: auto;
+                height: @guageHeight;
+
+                .round-corners(5px);
+
+                border: 2px solid white;
+
+                .gradient(#F2F2F2, #FFFFFF, #FFFFFF);
+                .box-shadow(0 1px 4px rgba(0, 0, 0, 0.25));
+            }
+
+            .maxRating
+            {
+                position: absolute;
+
+                display: block;
+
+                width: 100%;
+                height: auto;
+
+                top: 0;
+                bottom: 0;
+                left: 0;
+
+                margin: 0;
+                padding-right: 8px;
+
+                background: url('images/progressGradientHorizontal.png') repeat-y;
+                background-size: cover;
+
+                .round-corners(3px);
+
+                text-indent: -9999px;
+
+                border: none;
+
+                .box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.4),
+                            inset 0 (-@guageHeight / 4) (@guageHeight / 4) rgba(0, 0, 0, 0.2));
+            }
+
+            .rating
+            {
+                position: absolute;
+
+                display: block;
+
+                width: 100%;
+                height: auto;
+
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: auto;
+
+                margin: 0;
+
+                .gradient(#EEEEEE, #FFFFFF, #FFFFFF);
+
+                .round-corners(0px);
+
+                vertical-align: middle;
+                text-align: left;
+                line-height: @guageHeight - (@guageHeight / 10);
+
+                color: white;
+                font-family: @headingFontFamily;
+                text-shadow: rgba(0, 0, 0, 0.66) 0 1px 2px;
+
+                font-size: 1.2em;
+                font-weight: bold;
+
+                border: none;
+
+                .box-shadow(inset 1px 0 1px rgba(0, 0, 0, 0.0));
+
+                text-indent: -35px;
+
+                & ~ .maxRating:after
+                {
+                    display: none;
+                }
+
+                &.value_7_5
+                {
+                    width: 25%
+                }
+
+                &.value_8_0
+                {
+                    width: 20%
+                }
+
+                &.value_8_5
+                {
+                    width: 15%
+                }
+
+                &.value_9_0
+                {
+                    width: 10%
+                }
+            }
+        }
+    }
+}
+
+.footer
+{
+}
+
+.technologies
+{
+    .technologiesHeading
+    {
+        color: grey;
+        font-size: 30px;
+    }
+
+    li
+    {
+        text-indent: -9999px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 90px;
+        .opacity(0.66);
+
+        &.html5
+        {
+            background-image: url("images/tech/html5Logo.png");
+        }
+
+        &.css3
+        {
+            background-image: url("images/tech/css3Logo.png");
+        }
+
+        &.bootstrap
+        {
+            background-image: url("images/tech/twitterLogo.png");
+        }
+
+        &.lesscss
+        {
+            background-image: url("images/tech/lessLogo.png");
+        }
+
+        &.modernizr
+        {
+            background-image: url("images/tech/modernizrLogo.png");
+        }
+
+        &.jquery
+        {
+            background-image: url("images/tech/jqueryLogo.png");
+        }
+
+        &.grunt
+        {
+            background-image: url("images/tech/gruntLogo.png");
+        }
+
+        &.dropbox
+        {
+            background-image: url("images/tech/dropboxLogo.png");
+        }
+    }
+}
