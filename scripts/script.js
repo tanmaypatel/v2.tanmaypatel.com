@@ -107,14 +107,14 @@
             "Dribbble.",
             "Speaker Deck.",
             "iPad.",
-			"Mitali."
+			"Mitali.",
             "Trance.",
             "Tiesto.",
             "Armin Van Buuren.",
             "Kaju Katli.",
             "Mangoes.",
             "Mornings.",
-			"Mitali."
+			"Mitali.",
             "Walking.",
             "Music.",
             "Coding.",
@@ -122,7 +122,7 @@
             "JavaScript.",
             "Handicrafts.",
             "Magenta.",
-			"Mitali."
+			"Mitali.",
             "Rain.",
             "Winters.",
             "Gardens.",
@@ -132,7 +132,7 @@
             "Beaches.",
             "Mountains.",
             "7Up.",
-			"Mitali."
+			"Mitali.",
             "Origami.",
             "Reading.",
             "Mobiles.",
