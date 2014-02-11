@@ -1,21 +1,14 @@
 {
   "name": "tanmaypatel.com",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Tanmay Patel's Personal Website. Providing a hub to get connected with Tanmay Patel, get his updates, shares and be a part of his network.",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/tanmaypatel/tanmaypatel.github.io.git"
   },
   "author": "Tanmay Patel (me@tanmaypatel.com)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tanmaypatel/tanmaypatel.github.io/issues"
-  },
-  "homepage": "https://github.com/tanmaypatel/tanmaypatel.github.io",
+  "homepage": "http://www.tanmaypatel.com",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-less": "~0.9.0",
