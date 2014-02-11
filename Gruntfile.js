@@ -11,7 +11,7 @@ module.exports = function(grunt)
 									 dumpLineNumbers: 'comments'
 								 },
 								 files: {
-									 'styles/style.css': ['styles/style.less']
+									 'styles/dist/style.css': ['styles/src/style.less']
 								 }
 							 },
 							 dist: {
@@ -20,7 +20,7 @@ module.exports = function(grunt)
 									 cleancss: true
 								 },
 								 files: {
-									 'styles/style.temp.css': ['styles/style.less']
+									 'styles/dist/style.css': ['styles/src/style.less']
 								 }
 							 }
 						 },
@@ -32,7 +32,7 @@ module.exports = function(grunt)
 							 development: {
 								 files: {
 									 src: ['Gruntfile.js',
-										   'scripts/script.js']
+										   'scripts/src/script.js']
 								 }
 							 }
 						 },
@@ -47,18 +47,18 @@ module.exports = function(grunt)
 							 },
 							 dist: {
 								 files: {
-									 'scripts/script.min.js': ['scripts/script.js']
+									 'scripts/dist/script.min.js': ['scripts/src/script.js']
 								 }
 							 }
 						 },
 
 						 uncss: {
 							 options: {
-								 ignore: []
+								 ignore: [/\.fixedNavigation*/]
 							 },
 							 dist: {
 								 files: {
-									 'styles/style.tidy.css': ['index.html']
+									 'styles/dist/style.tidy.css': ['index.src.html']
 								 }
 							 }
 						 },
@@ -70,7 +70,7 @@ module.exports = function(grunt)
 							 },
 							 dist: {
 								 files: {
-									 'styles/style.css': ['styles/style.tidy.css']
+									 'styles/dist/style.css': ['styles/dist/style.tidy.css']
 								 }
 							 }
 						 },
@@ -78,25 +78,14 @@ module.exports = function(grunt)
 						 copy: {
 							 development: {
 								 files: [
-									 {src: ['scripts/script.js'], dest: 'scripts/script.min.js'}
+									 {src: ['scripts/src/script.js'], dest: 'scripts/dist/script.min.js'}
 								 ]
-							 }
-						 },
-
-						 concat: {
-							 development: {
-								 src: ['thirdparty/bootstrap/css/bootstrap.min.css', 'thirdparty/bootstrap/css/bootstrap-responsive.min.css', 'styles/style.css'],
-								 dest: 'styles/style.css'
-							 },
-							 dist: {
-								 src: ['thirdparty/bootstrap/css/bootstrap.min.css', 'thirdparty/bootstrap/css/bootstrap-responsive.min.css', 'styles/style.temp.css'],
-								 dest: 'styles/style.css'
 							 }
 						 },
 
 						 clean: {
 							 dist_after: {
-								 src: ['styles/style.temp.css', 'styles/style.tidy.css']
+								 src: ['styles/dist/style.temp.css', 'styles/dist/style.tidy.css']
 							 }
 						 },
 
@@ -105,12 +94,25 @@ module.exports = function(grunt)
 								 livereload: true
 							 },
 							 styles: {
-								 files: 'styles/**/*.less',
-								 tasks: ['less:development', 'concat:development']
+								 files: 'styles/src/**/*.less',
+								 tasks: ['less:development']
 							 },
 							 scripts: {
-								 files: 'scripts/**/*.js',
+								 files: 'scripts/src/**/*.js',
 								 tasks: ['copy:development']
+							 }
+						 },
+						 
+						 processhtml: {
+							 options: {
+								 data: {
+									 message: 'Preparing Distribution File!'
+								 }
+							 },
+							 dist: {
+								 files: {
+									 'index.html': ['index.src.html']
+								 }
 							 }
 						 }
 					 }
@@ -126,8 +128,9 @@ module.exports = function(grunt)
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-processhtml');
 
 	// Default Task(s)
-	grunt.registerTask('default', ['less:development', 'jshint:development', 'uglify:thirdparty', 'concat:development', 'copy:development']);
-	grunt.registerTask('dist', ['less:dist', 'concat:dist', 'jshint:development', 'uglify:thirdparty', 'uglify:dist', 'uncss:dist', 'clean:dist_after']);
+	grunt.registerTask('default', ['less:development', 'jshint:development', 'uglify:thirdparty', 'copy:development']);
+	grunt.registerTask('dist', ['less:dist', 'jshint:development', 'uglify:thirdparty', 'uglify:dist', 'uncss:dist', 'cssmin:dist', 'clean:dist_after', 'processhtml:dist']);
 };
