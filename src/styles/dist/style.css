@@ -578,10 +578,10 @@ h7 {
   vertical-align: middle;
   text-align: center;
   line-height: 100px;
-  font-family: 'roboto_light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-shadow: rgba(0, 0, 0, 0.4) 0 1px 2px;
   font-size: 1.75em;
-  font-weight: bold;
+  font-weight: normal;
   border: 2px solid white;
   background: #ffffff;
   background-image: -moz-linear-gradient(top, #cccccc 0%, #ffffff 100%);
