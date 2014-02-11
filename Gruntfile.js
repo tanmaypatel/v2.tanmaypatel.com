@@ -38,11 +38,12 @@ module.exports = function(grunt)
 						 },
 
 						 uglify: {
-							 thirdparty: {
+							 components: {
 								 files: {
-									 'thirdparty/thirdparty.min.js': ['thirdparty/libs/modernizr.js',
-																	  'thirdparty/libs/jquery.js',
-																	  'thirdparty/bootstrap/js/bootstrap.js']
+									 'scripts/dist/components.min.js': ['components/modernizr/modernizr.js',
+									                                    'components/jquery/jquery-1.11.0.min.js',
+									                                    'components/jquery/jquery-migrate-1.2.1.min.js',
+									                                    'components/bootstrap/js/bootstrap.min.js']
 								 }
 							 },
 							 dist: {
@@ -131,6 +132,6 @@ module.exports = function(grunt)
 	grunt.loadNpmTasks('grunt-processhtml');
 
 	// Default Task(s)
-	grunt.registerTask('default', ['less:development', 'jshint:development', 'uglify:thirdparty', 'copy:development']);
-	grunt.registerTask('dist', ['less:dist', 'jshint:development', 'uglify:thirdparty', 'uglify:dist', 'uncss:dist', 'cssmin:dist', 'clean:dist_after', 'processhtml:dist']);
+	grunt.registerTask('default', ['less:development', 'jshint:development', 'uglify:components', 'copy:development']);
+	grunt.registerTask('dist', ['less:dist', 'jshint:development', 'uglify:components', 'uglify:dist', 'uncss:dist', 'cssmin:dist', 'clean:dist_after', 'processhtml:dist']);
 };
