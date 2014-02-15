@@ -232,5 +232,4 @@
         var $greetings = $("#greetings");
         $greetings.text(randomGreeting + ", " + timedGreeting);
     }
-
 })();

@@ -1,0 +1,785 @@
+@font-face {
+  font-family: 'nexa_bold';
+  src: url('../fonts/nexa_bold-webfont.eot');
+  src: url('../fonts/nexa_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/nexa_bold-webfont.woff') format('woff'), url('../fonts/nexa_bold-webfont.ttf') format('truetype'), url('../fonts/nexa_bold-webfont.svg#nexa_boldregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'nexa_light';
+  src: url('../fonts/nexa_light-webfont.eot');
+  src: url('../fonts/nexa_light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/nexa_light-webfont.woff') format('woff'), url('../fonts/nexa_light-webfont.ttf') format('truetype'), url('../fonts/nexa_light-webfont.svg#nexa_lightregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'source_code_pro';
+  src: url('../fonts/sourcecodepro-regular-webfont.eot');
+  src: url('../fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcecodepro-regular-webfont.woff') format('woff'), url('../fonts/sourcecodepro-regular-webfont.ttf') format('truetype'), url('../fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'source_code_pro';
+  src: url('../fonts/sourcecodepro-semibold-webfont.eot');
+  src: url('../fonts/sourcecodepro-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcecodepro-semibold-webfont.woff') format('woff'), url('../fonts/sourcecodepro-semibold-webfont.ttf') format('truetype'), url('../fonts/sourcecodepro-semibold-webfont.svg#source_code_pro_semiboldRg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto_black';
+  src: url('../fonts/roboto-black-webfont.eot');
+  src: url('../fonts/roboto-black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-black-webfont.woff') format('woff'), url('../fonts/roboto-black-webfont.ttf') format('truetype'), url('../fonts/roboto-black-webfont.svg#roboto_bkbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto_light';
+  src: url('../fonts/roboto-light-webfont.eot');
+  src: url('../fonts/roboto-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-light-webfont.woff') format('woff'), url('../fonts/roboto-light-webfont.ttf') format('truetype'), url('../fonts/roboto-light-webfont.svg#roboto_ltregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto_light';
+  src: url('../fonts/roboto-lightitalic-webfont.eot');
+  src: url('../fonts/roboto-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-lightitalic-webfont.woff') format('woff'), url('../fonts/roboto-lightitalic-webfont.ttf') format('truetype'), url('../fonts/roboto-lightitalic-webfont.svg#roboto_ltitalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/roboto-regular-webfont.eot');
+  src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-regular-webfont.woff') format('woff'), url('../fonts/roboto-regular-webfont.ttf') format('truetype'), url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/roboto-bold-webfont.eot');
+  src: url('../fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-bold-webfont.woff') format('woff'), url('../fonts/roboto-bold-webfont.ttf') format('truetype'), url('../fonts/roboto-bold-webfont.svg#robotobold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/roboto-italic-webfont.eot');
+  src: url('../fonts/roboto-italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-italic-webfont.woff') format('woff'), url('../fonts/roboto-italic-webfont.ttf') format('truetype'), url('../fonts/roboto-italic-webfont.svg#robotoitalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/roboto-bolditalic-webfont.eot');
+  src: url('../fonts/roboto-bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-bolditalic-webfont.woff') format('woff'), url('../fonts/roboto-bolditalic-webfont.ttf') format('truetype'), url('../fonts/roboto-bolditalic-webfont.svg#robotobold_italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+/* ***** */
+/* FONTS */
+/* ***** */
+/* ****** */
+/* COLORS */
+/* ****** */
+/* line 25, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+/* line 32, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.no-ready {
+  height: 100%;
+}
+/* line 36, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.no-ready body {
+  height: 100%;
+  background: url('../images/loading.gif') center center no-repeat;
+}
+/* line 43, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+body {
+  font-family: 'roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: url('../images/canvasTexture.png');
+}
+/* line 54, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.no-ready #pageContainer {
+  display: none;
+}
+/* line 60, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+  font-family: 'roboto_light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  fontsize: bigger;
+  font-weight: normal;
+  line-height: 1.2;
+}
+/* line 69, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#brand {
+  text-align: center;
+  color: #AAAAAA;
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* line 73, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#brand .brandNameTextEffect {
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0px 0px 48px rgba(194, 14, 105, 0), -8px -8px 16px rgba(126, 151, 17, 0.5), 8px -8px 16px rgba(0, 136, 196, 0.5), 8px 8px 16px rgba(221, 34, 45, 0.5), -8px 8px 16px rgba(248, 199, 16, 0.66);
+}
+/* line 97, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#brand h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 3em;
+}
+/* line 107, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#brand .name {
+  font-family: 'nexa_bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0px 0px 48px rgba(194, 14, 105, 0), -8px -8px 16px rgba(126, 151, 17, 0.5), 8px -8px 16px rgba(0, 136, 196, 0.5), 8px 8px 16px rgba(221, 34, 45, 0.5), -8px 8px 16px rgba(248, 199, 16, 0.66);
+}
+/* line 116, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#brand small {
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  color: #AAAAAA;
+  text-transform: none;
+  font-size: 0.33em;
+  margin-top: 10px;
+  vertical-align: top;
+}
+/* line 130, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#tagLine {
+  text-align: center;
+  color: #999;
+  margin: 20px;
+}
+/* line 137, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#tagLine h2 {
+  padding: 0;
+  margin: 0;
+}
+/* line 143, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#tagLine .primaryLine {
+  display: block;
+  font-size: 1.2em;
+  font-family: 'nexa_bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+/* line 151, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#tagLine .secondaryLine {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.2;
+  color: #0088c4;
+}
+/* line 161, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#cardContainer {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+/* line 171, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#cardContainer.collapsed #cardWrapper {
+  height: 0;
+  overflow: hidden;
+  border-top: none;
+  -webkit-box-shadow: 0 -35px 30px 10px #000000;
+  -moz-box-shadow: 0 -35px 30px 10px #000000;
+  box-shadow: 0 -35px 30px 10px #000000;
+}
+/* line 182, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#cardContainer #contactDrawerHandle {
+  display: inline-block;
+  color: white;
+  text-shadow: none;
+  background: #0088c4;
+  background-image: -moz-linear-gradient(top, #0088c4 0%, #0076ab 100%);
+  background-image: -webkit-linear-gradient(top, #0088c4 0%, #0076ab 100%);
+  background-image: -o-linear-gradient(top, #0088c4 0%, #0076ab 100%);
+  background-image: linear-gradient(to bottom, #0088c4 0%, #0076ab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0088c4', endColorstr='#0076ab',GradientType=0 );
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  padding: 5px 15px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/* line 196, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#cardContainer #contactDrawerHandle:hover {
+  text-decoration: none;
+}
+/* line 203, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#cardWrapper {
+  text-align: left;
+  border: 1px solid #D4D4D4;
+  background: #ffffff;
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 );
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+/* line 213, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#card {
+  padding: 10px;
+}
+/* line 217, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#card #cardContactInformation:before,
+#card #summerizedContact:before {
+  content: '{';
+  color: #808080;
+}
+/* line 223, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#card #cardContactInformation:after,
+#card #summerizedContact:after {
+  content: '}';
+  color: #808080;
+}
+/* line 229, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#card #cardContactInformation {
+  font-family: 'source_code_pro', courier;
+  font-weight: normal;
+  font-size: 1em;
+  line-heihgt: 1.5;
+  margin: 0;
+}
+/* line 238, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#card #cardContactInformation .wrapper,
+#card #cardContactInformation .property {
+  display: block;
+}
+/* line 243, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#card #cardContactInformation .property {
+  padding-left: 2em;
+}
+/* line 248, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#card #cardContactInformation .propertyName {
+  color: #639711;
+}
+/* line 253, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#card #cardContactInformation .propertyValue {
+  color: #0088c4;
+}
+/* line 258, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#card #cardContactInformation > .property > span.propertyValue {
+  background: rgba(248, 245, 16, 0.75);
+  color: #dd222d;
+}
+@media (max-width: 480px) {
+  /* line 270, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #card #cardContactInformation:before {
+    content: '';
+  }
+  /* line 275, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #card #cardContactInformation:after {
+    content: '';
+  }
+  /* line 282, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #card #cardContactInformation .property {
+    padding-bottom: 0.8em;
+  }
+  /* line 287, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #card #cardContactInformation .propertyName {
+    display: block;
+  }
+  /* line 292, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #card #cardContactInformation .propertyValue {
+    display: block;
+    padding-left: 1em;
+  }
+  /* line 298, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #card #cardContactInformation ul.propertyValue {
+    padding-left: 0;
+  }
+  /* line 303, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #card #cardContactInformation > .property {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+}
+/* line 312, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+/* line 317, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks ul {
+  padding: 20px 0;
+  margin: 0;
+}
+/* line 323, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks li {
+  padding: 5px;
+}
+/* line 328, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks a {
+  display: block;
+  padding-left: 28px;
+  line-height: 24px;
+  height: 24px;
+  color: #808080;
+  font-size: 0.9em;
+  background: url('../images/socialMediaIcons.png') no-repeat;
+}
+/* line 341, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks a span {
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 1px;
+}
+/* line 346, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks a span:first-child {
+  display: none;
+}
+/* line 351, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks a:hover {
+  text-decoration: none;
+}
+/* line 355, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks a:hover span {
+  text-shadow: none;
+}
+/* line 362, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks .twitter {
+  background-position: 0 0;
+}
+/* line 367, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks .facebook {
+  background-position: -24px -24px;
+}
+/* line 372, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks .linkedin {
+  background-position: -48px -48px;
+}
+/* line 377, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#connectionLinks .delicious {
+  background-position: -72px -72px;
+}
+@media (max-width: 767px) {
+  /* line 387, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #connectionLinks ul {
+    padding: 5px 0;
+    margin: 0;
+  }
+  /* line 393, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #connectionLinks li {
+    display: inline-block;
+  }
+}
+@media (max-width: 400px) {
+  /* line 404, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #connectionLinks li {
+    width: 49%;
+  }
+}
+/* line 413, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#summaryWrapper {
+  margin-bottom: 40px;
+}
+/* line 417, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#summaryWrapper #greetings {
+  display: block;
+  font-family: 'roboto_light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 1.5em;
+  color: #0088c4;
+}
+/* line 426, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#summaryWrapper .heart {
+  color: #dd222d;
+  font-size: 1.2em;
+  line-height: 1;
+}
+@media (max-width: 480px) {
+  /* line 436, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #summaryWrapper {
+    margin-bottom: 10px;
+  }
+}
+/* line 444, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#navigationBarContainer {
+  margin-bottom: 0;
+}
+/* line 451, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#navigationBar .brand {
+  display: none;
+}
+/* line 458, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#navigationBar .navbar-inner .nav {
+  float: none;
+  text-align: center;
+}
+/* line 463, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#navigationBar .navbar-inner .nav li {
+  float: none;
+  display: inline-block;
+}
+/* line 468, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#navigationBar .navbar-inner .nav li a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/* line 474, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#navigationBar .navbar-inner .nav li.active a {
+  margin-top: 3px;
+  color: #0088c4;
+}
+/* line 480, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#navigationBar .navbar-inner .nav li.emphasize a {
+  color: white;
+  text-shadow: none;
+  background: #0088c4;
+  background-image: -moz-linear-gradient(top, #0088c4 0%, #0076ab 100%);
+  background-image: -webkit-linear-gradient(top, #0088c4 0%, #0076ab 100%);
+  background-image: -o-linear-gradient(top, #0088c4 0%, #0076ab 100%);
+  background-image: linear-gradient(to bottom, #0088c4 0%, #0076ab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0088c4', endColorstr='#0076ab',GradientType=0 );
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+/* line 494, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.fixedNavigation #navigationBar {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+/* line 500, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.fixedNavigation #navigationBar .navbar-inner {
+  -webkit-border-top-left-radius: 0;
+  -moz-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+}
+@media (max-width: 480px) {
+  /* line 510, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #navigationBarContainer {
+    display: none;
+  }
+}
+/* line 516, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.section {
+  margin: 0;
+  padding-top: 40px;
+}
+/* line 521, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.section .sectionHeading {
+  color: #0088c4;
+  font-size: 30px;
+}
+/* line 527, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.section h4 {
+  font-size: 1.3em;
+  color: #c20e69;
+}
+@media (max-width: 480px) {
+  /* line 536, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  .section {
+    padding-top: 10px;
+  }
+}
+/* line 544, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#recognitions #recognitionsList li {
+  line-height: 1.5;
+}
+/* line 556, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#skills #skillSet {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+/* line 561, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#skills #skillSet .skill {
+  display: block;
+  margin-top: 160px;
+  text-align: center;
+  font-size: 1em;
+  font-style: italic;
+  color: gray;
+}
+/* line 573, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#skills #skillSet .skillInformationWrapper {
+  position: relative;
+  margin: 0 auto;
+  background: white;
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  border-radius: 75px;
+  border: 2px solid white;
+  background: #ffffff;
+  background-image: -moz-linear-gradient(top, #dddddd 0%, #ffffff 100%);
+  background-image: -webkit-linear-gradient(top, #dddddd 0%, #ffffff 100%);
+  background-image: -o-linear-gradient(top, #dddddd 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, #dddddd 0%, #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#ffffff',GradientType=0 );
+  -webkit-box-shadow: 0 2.5px 7.5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 2.5px 7.5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2.5px 7.5px rgba(0, 0, 0, 0.25);
+  margin-bottom: 50px;
+}
+/* line 594, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#skills #skillSet .maxRating {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-top: -60px;
+  margin-left: -60px;
+  top: 50%;
+  left: 50%;
+  background: url('../images/progressGradient.png') center center no-repeat;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-box-shadow: inset 0 7.5px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 7.5px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 7.5px 5px rgba(0, 0, 0, 0.4);
+  text-indent: -9999px;
+}
+/* line 620, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#skills #skillSet .rating {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  top: 50%;
+  left: 50%;
+  background: white;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 100px;
+  font-family: 'roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 2px;
+  font-size: 1.75em;
+  font-weight: normal;
+  border: 2px solid white;
+  background: #ffffff;
+  background-image: -moz-linear-gradient(top, #cccccc 0%, #ffffff 100%);
+  background-image: -webkit-linear-gradient(top, #cccccc 0%, #ffffff 100%);
+  background-image: -o-linear-gradient(top, #cccccc 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, #cccccc 0%, #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=0 );
+  -webkit-box-shadow: 0 5px 3.33333333px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 5px 3.33333333px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 3.33333333px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+/* line 658, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#skills #skillSet .rating ~ .maxRating:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  -webkit-border-top-left-radius: 60px;
+  -moz-border-top-left-radius: 60px;
+  border-top-left-radius: 60px;
+  background: url('../images/progressGradientMask.png') no-repeat;
+  opacity: 0.66;
+  filter: alpha(opacity= 66 );
+}
+/* line 678, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#skills #skillSet .rating.value_9_0 ~ .maxRating:after {
+  background-position: -40px -115px;
+}
+/* line 683, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#skills #skillSet .rating.value_8_5 ~ .maxRating:after {
+  background-position: -40px -215px;
+}
+/* line 688, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#skills #skillSet .rating.value_8_0 ~ .maxRating:after {
+  background-position: -40px -315px;
+}
+/* line 693, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+#skills #skillSet .rating.value_7_5 ~ .maxRating:after {
+  background-position: -40px -415px;
+}
+/* line 701, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.timeDuration,
+.projectLink {
+  color: gray;
+  font-family: 'roboto_light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+}
+@media (max-width: 767px) {
+  /* line 714, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #skills #skillSet {
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  /* line 718, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #skills #skillSet .skill {
+    margin-top: 45px;
+  }
+  /* line 723, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #skills #skillSet .skillInformationWrapper {
+    position: relative;
+    width: auto;
+    height: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: #ffffff;
+    background-image: -moz-linear-gradient(top, #f2f2f2 0%, #ffffff 100%);
+    background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #ffffff 100%);
+    background-image: -o-linear-gradient(top, #f2f2f2 0%, #ffffff 100%);
+    background-image: linear-gradient(to bottom, #f2f2f2 0%, #ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ffffff',GradientType=0 );
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  }
+  /* line 738, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #skills #skillSet .maxRating {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding-right: 8px;
+    background: url('../images/progressGradientHorizontal.png') repeat-y;
+    background-size: cover;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-indent: -9999px;
+    border: none;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4), inset 0 -10px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4), inset 0 -10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4), inset 0 -10px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* line 767, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #skills #skillSet .rating {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    margin: 0;
+    background: #ffffff;
+    background-image: -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%);
+    background-image: -webkit-linear-gradient(top, #eeeeee 0%, #ffffff 100%);
+    background-image: -o-linear-gradient(top, #eeeeee 0%, #ffffff 100%);
+    background-image: linear-gradient(to bottom, #eeeeee 0%, #ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    vertical-align: middle;
+    text-align: left;
+    line-height: 36px;
+    color: white;
+    font-family: 'roboto_light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-shadow: rgba(0, 0, 0, 0.66) 0 1px 2px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    -webkit-box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0);
+    -moz-box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0);
+    box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0);
+    text-indent: -35px;
+  }
+  /* line 804, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #skills #skillSet .rating ~ .maxRating:after {
+    display: none;
+  }
+  /* line 809, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #skills #skillSet .rating.value_7_5 {
+    width: 25%;
+  }
+  /* line 814, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #skills #skillSet .rating.value_8_0 {
+    width: 20%;
+  }
+  /* line 819, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #skills #skillSet .rating.value_8_5 {
+    width: 15%;
+  }
+  /* line 824, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+  #skills #skillSet .rating.value_9_0 {
+    width: 10%;
+  }
+}
+/* line 839, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.technologies .technologiesHeading {
+  color: grey;
+  font-size: 30px;
+}
+/* line 845, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.technologies li {
+  text-indent: -9999px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 90px;
+  opacity: 0.66;
+  filter: alpha(opacity= 66 );
+}
+/* line 853, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.technologies li.html5 {
+  background-image: url('../images/tech/html5Logo.png');
+}
+/* line 858, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.technologies li.css3 {
+  background-image: url('../images/tech/css3Logo.png');
+}
+/* line 863, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.technologies li.bootstrap {
+  background-image: url('../images/tech/twitterLogo.png');
+}
+/* line 868, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.technologies li.lesscss {
+  background-image: url('../images/tech/lessLogo.png');
+}
+/* line 873, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.technologies li.modernizr {
+  background-image: url('../images/tech/modernizrLogo.png');
+}
+/* line 878, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.technologies li.jquery {
+  background-image: url('../images/tech/jqueryLogo.png');
+}
+/* line 883, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.technologies li.grunt {
+  background-image: url('../images/tech/gruntLogo.png');
+}
+/* line 888, C:\Users\740985\Documents\Personal\Projects\tanmaypatel.github.io\src\styles\src\style.less */
+.technologies li.dropbox {
+  background-image: url('../images/tech/dropboxLogo.png');
+}

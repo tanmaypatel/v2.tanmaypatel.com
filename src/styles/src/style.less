@@ -1,15 +1,15 @@
-@import "3L";
-@import "fonts";
+@import '3L';
+@import 'fonts';
 
 /* ***** */
 /* FONTS */
 /* ***** */
 
-@heroFontFamily: "nexa_bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@taglineFontFamily: Georgia, "Times New Roman", serif;
-@codeFontFamily: "source_code_pro", courier;
-@headingFontFamily: "roboto_light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@contentFontFamily: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@heroFontFamily: 'nexa_bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@taglineFontFamily: Georgia, 'Times New Roman', serif;
+@codeFontFamily: 'source_code_pro', courier;
+@headingFontFamily: 'roboto_light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@contentFontFamily: 'roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 /* ****** */
 /* COLORS */
@@ -36,7 +36,7 @@
     body
     {
         height: 100%;
-        background: url("images/loading.gif") center center no-repeat;
+        background: url('../images/loading.gif') center center no-repeat;
     }
 }
 
@@ -46,7 +46,7 @@ body
     font-size: 16px;
     line-height: 1.5;
 
-    background: url('images/canvasTexture.png');
+    background: url('../images/canvasTexture.png');
 }
 
 .no-ready
@@ -336,7 +336,7 @@ h1, h2, h3, h4, h5, h6, h7
 
         font-size: 0.9em;
 
-        background: url("images/socialMediaIcons.png") no-repeat;
+        background: url('../images/socialMediaIcons.png') no-repeat;
 
         span
         {
@@ -606,7 +606,7 @@ h1, h2, h3, h4, h5, h6, h7
             top: 50%;
             left: 50%;
 
-            background: url('images/progressGradient.png') center center no-repeat;
+            background: url('../images/progressGradient.png') center center no-repeat;
 
             .round-corners(@gaugeDiameter / 2);
 
@@ -642,11 +642,11 @@ h1, h2, h3, h4, h5, h6, h7
             text-align: center;
             line-height: @ratingDiameter;
 
-            font-family: @headingFontFamily;
+            font-family: @contentFontFamily;
             text-shadow: rgba(0, 0, 0, 0.4) 0 1px 2px;
 
             font-size: 1.75em;
-            font-weight: bold;
+            font-weight: normal;
 
             border: 2px solid white;
 
@@ -670,7 +670,7 @@ h1, h2, h3, h4, h5, h6, h7
 
                 .round-corner(top-left, (@gaugeDiameter / 2));
 
-                background: url("images/progressGradientMask.png") no-repeat;
+                background: url('../images/progressGradientMask.png') no-repeat;
 
                 .opacity(0.66);
             }
@@ -751,7 +751,7 @@ h1, h2, h3, h4, h5, h6, h7
                 margin: 0;
                 padding-right: 8px;
 
-                background: url('images/progressGradientHorizontal.png') repeat-y;
+                background: url('../images/progressGradientHorizontal.png') repeat-y;
                 background-size: cover;
 
                 .round-corners(3px);
@@ -852,42 +852,42 @@ h1, h2, h3, h4, h5, h6, h7
 
         &.html5
         {
-            background-image: url("images/tech/html5Logo.png");
+            background-image: url('../images/tech/html5Logo.png');
         }
 
         &.css3
         {
-            background-image: url("images/tech/css3Logo.png");
+            background-image: url('../images/tech/css3Logo.png');
         }
 
         &.bootstrap
         {
-            background-image: url("images/tech/twitterLogo.png");
+            background-image: url('../images/tech/twitterLogo.png');
         }
 
         &.lesscss
         {
-            background-image: url("images/tech/lessLogo.png");
+            background-image: url('../images/tech/lessLogo.png');
         }
 
         &.modernizr
         {
-            background-image: url("images/tech/modernizrLogo.png");
+            background-image: url('../images/tech/modernizrLogo.png');
         }
 
         &.jquery
         {
-            background-image: url("images/tech/jqueryLogo.png");
+            background-image: url('../images/tech/jqueryLogo.png');
         }
 
         &.grunt
         {
-            background-image: url("images/tech/gruntLogo.png");
+            background-image: url('../images/tech/gruntLogo.png');
         }
 
         &.dropbox
         {
-            background-image: url("images/tech/dropboxLogo.png");
+            background-image: url('../images/tech/dropboxLogo.png');
         }
     }
 }
