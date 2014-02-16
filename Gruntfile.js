@@ -1,5 +1,6 @@
 module.exports = function(grunt)
 {
+	require('time-grunt')(grunt);
 
 	grunt.initConfig({
 		config: {
@@ -105,6 +106,11 @@ module.exports = function(grunt)
 		},
 
 		clean: {
+			dist_before: {
+				src: [ '<%= config.distLocation %>/styles/',
+					   '<%= config.distLocation %>/scripts/',
+					   '<%= config.distLocation %>/assets/' ]
+			},
 			dist_after: {
 				src: [ '<%= config.distLocation %>/styles/dist/style.tidy.css' ]
 			}
@@ -152,5 +158,5 @@ module.exports = function(grunt)
 
 	// Default Task(s)
 	grunt.registerTask('default', [ 'less:development', 'jshint:development', 'uglify:components', 'copy:development' ]);
-	grunt.registerTask('dist', [ 'less:dist', 'jshint:development', 'uglify:components', 'uglify:dist', 'copy:dist', 'uncss:dist', 'cssmin:dist', 'clean:dist_after', 'processhtml:dist' ]);
+	grunt.registerTask('dist', [ 'clean:dist_before', 'less:dist', 'jshint:development', 'uglify:components', 'uglify:dist', 'copy:dist', 'uncss:dist', 'cssmin:dist', 'clean:dist_after', 'processhtml:dist' ]);
 };

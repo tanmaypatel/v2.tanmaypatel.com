@@ -1,5 +1,6 @@
 @import '3L';
 @import 'fonts';
+@import 'iconsontanmaypatel';
 
 /* ***** */
 /* FONTS */
@@ -328,15 +329,12 @@ h1, h2, h3, h4, h5, h6, h7
     a
     {
         display: block;
-        padding-left: 28px;
         line-height: 24px;
         height: 24px;
 
         color: #808080;
 
         font-size: 0.9em;
-
-        background: url('../images/socialMediaIcons.png') no-repeat;
 
         span
         {
@@ -345,7 +343,9 @@ h1, h2, h3, h4, h5, h6, h7
 
         span:first-child
         {
-            display: none;
+	        text-shadow: none;
+	        font-size: 1.15em;
+	        margin-right: 0.5em;
         }
 
         &:hover
@@ -358,6 +358,13 @@ h1, h2, h3, h4, h5, h6, h7
             }
         }
     }
+
+	[class^="fontastic-"]:before, [class*=" fontastic-"]:before
+	{
+		vertical-align: middle;
+		line-height: 1.15em;
+		font-size: 1.15em;
+	}
 
     .twitter
     {
@@ -832,62 +839,23 @@ h1, h2, h3, h4, h5, h6, h7
 
 .footer
 {
-}
+	padding-bottom: 10px;
+	text-align: center;
 
-.technologies
-{
-    .technologiesHeading
-    {
-        color: grey;
-        font-size: 30px;
-    }
+	.technologiesHeading
+	{
+		color: fade(black, 33%);
+		font-size: 30px;
+	}
 
-    li
-    {
-        text-indent: -9999px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        height: 90px;
-        .opacity(0.66);
-
-        &.html5
-        {
-            background-image: url('../images/tech/html5Logo.png');
-        }
-
-        &.css3
-        {
-            background-image: url('../images/tech/css3Logo.png');
-        }
-
-        &.bootstrap
-        {
-            background-image: url('../images/tech/twitterLogo.png');
-        }
-
-        &.lesscss
-        {
-            background-image: url('../images/tech/lessLogo.png');
-        }
-
-        &.modernizr
-        {
-            background-image: url('../images/tech/modernizrLogo.png');
-        }
-
-        &.jquery
-        {
-            background-image: url('../images/tech/jqueryLogo.png');
-        }
-
-        &.grunt
-        {
-            background-image: url('../images/tech/gruntLogo.png');
-        }
-
-        &.dropbox
-        {
-            background-image: url('../images/tech/dropboxLogo.png');
-        }
-    }
+	.technologies
+	{
+		.github
+		{
+			display: block;
+			font-size: 2em;
+			color: gray;
+			text-shadow: -1px -1px fade(black, 33%), 1px 1px fade(white, 66%);
+		}
+	}
 }

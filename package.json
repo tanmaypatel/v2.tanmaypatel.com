@@ -20,6 +20,7 @@
     "grunt-uncss": "~0.1.9",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-cssmin": "~0.7.0",
-    "grunt-processhtml": "~0.3.0"
+    "grunt-processhtml": "~0.3.0",
+    "time-grunt": "~0.2.9"
   }
 }
