@@ -56,7 +56,8 @@ module.exports = function(grunt)
 
 		uncss: {
 			options: {
-				ignore: [ /\.fixedNavigation*/ ]
+				ignore: [ /\.fixedNavigation*/,
+						  /\.navbar(.)*.active*/ ]
 			},
 			dist: {
 				files: {
